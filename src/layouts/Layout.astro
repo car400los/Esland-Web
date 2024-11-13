@@ -5,11 +5,11 @@ interface Props {
 	title: string;
 }
 
-import Analytics from '@vercel/analytics/astro';
+import Analytics from '@vercel/analytics/astro'
 
 const { description,title } = Astro.props;
 
-import SpeedInsights from '@vercel/speed-insights/astro';
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 ---  
 
 <!doctype html>
@@ -20,9 +20,10 @@ import SpeedInsights from '@vercel/speed-insights/astro';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
-		<Analytics />
-		<SpeedInsights />
+		
 	</head>
+	<SpeedInsights />
+	<Analytics />
 	<body>
 	    <Header />
 		<slot />
